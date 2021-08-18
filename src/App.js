@@ -1,16 +1,18 @@
 import './App.css';
-//import Button from './components/button/Button';
-import Navbar from './components/navbar/Navbar';
-import Card from "./components/card/Card"
+import React from "react";
+import HomePage from './pages/homePage/HomePage';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 
 function App() {
   return (
-    <div className="App">
-      <Navbar></Navbar>
-      
-      <Card rank={"5"} suit={"♠️"}></Card>
-      
-    </div>
+    <Router className="App">
+        <Switch>
+          <Route>
+            <HomePage/>
+          </Route>
+        </Switch>
+    </Router>
   );
 }
 

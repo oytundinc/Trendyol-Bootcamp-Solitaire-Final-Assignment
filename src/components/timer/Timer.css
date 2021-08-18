@@ -1,0 +1,6 @@
+.timer {
+    display: inline;
+    color: white;
+    border: 5px solid black;
+    border-radius: 20%;
+  }
