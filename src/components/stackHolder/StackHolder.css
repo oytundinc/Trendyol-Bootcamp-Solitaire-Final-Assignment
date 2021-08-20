@@ -1,7 +1,7 @@
 .card-holder {
     border: 2px dotted black;
-    width: 155px;
-    height: 205px;
+    width: 152.5px;
+    height: 202.5px;
     border-radius: 5%;
     padding: 0px;
     margin: 10px;
@@ -13,7 +13,6 @@
 .card-holder li {
     position: absolute;
     list-style-type: none;
-    box-shadow: 0 0 5px rgba(0,0,0,.5);
     z-index: 1;
 }
 

@@ -6,11 +6,11 @@ import SuitSymbol from "../suitSymbol/SuitSymbol"
 
 class Card extends React.Component {
 
-    constructor({rank, suit}) {
-        super({rank, suit});
+    constructor(props) {
+        super(props);
         this.state = {
-            rank : rank,
-            suit : suit,
+            rank : props.rank,
+            suit : props.suit,
         }
     }
 

@@ -1,6 +1,10 @@
 .timer {
-    display: inline;
-    color: white;
-    border: 5px solid black;
-    border-radius: 20%;
-  }
+  font-size: 30px;
+  width: 70px;
+  display: inline;
+  color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-left: auto;
+  padding: 10px;
+}

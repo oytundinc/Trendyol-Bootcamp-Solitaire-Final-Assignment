@@ -1,7 +1,8 @@
 .navbar {
-    text-align: center;
-    color:whitesmoke;
-    background-color: yellowgreen;
-    border: whitesmoke;
-    height: 75px;
-  }
+  color:whitesmoke;
+  background-color: yellowgreen;
+  border: whitesmoke;
+  height: 75px;
+  align-items: center;
+  vertical-align: middle;
+}

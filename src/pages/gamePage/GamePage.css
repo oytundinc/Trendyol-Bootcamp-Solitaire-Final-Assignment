@@ -1,0 +1,48 @@
+.game-page {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+  
+.box {
+  border: 1px solid salmon;
+  width: 600px;
+  height: 160px;
+  background-color: orange;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  vertical-align: auto;
+}
+
+.box h3 {
+  font-size: 40px;
+  color: green;
+}
+
+.box p {
+  color: black;
+  font-size: 40px;
+  border: 2px solid black;
+  border-radius: 15px;
+  text-align: center;
+  display: inline-block;
+}
+
+.box p:hover {
+  transform: scale(1.1);
+  transition: all 0.25s ease-in-out;
+  border: 2px solid black;
+  border-radius: 15px;
+}
+
+
+  
+  
+
+  

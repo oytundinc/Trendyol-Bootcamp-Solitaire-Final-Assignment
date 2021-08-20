@@ -5,7 +5,7 @@ import "../navbar/Navbar.css"
 const Navbar = () => {
     return (
         <div className="navbar">
-            <Timer></Timer>
+            <Timer className="timer"></Timer>
             <Button>New Game</Button>
             
         </div>

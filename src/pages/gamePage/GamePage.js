@@ -1,17 +1,22 @@
-import React from 'react'
-import Navbar from '../../components/navbar/Navbar';
-import Card from "../../components/card/Card"
+import React from 'react';
+import { Link } from "react-router-dom";
+import './GamePage.css';
+
 
 function GamePage() {
     return (
-        <div>
-            <Navbar></Navbar>
-            <Card rank={"6"} suit={"♠️"}></Card>
-      
-        </div>
+        <React.Fragment>
+            <div className="game-page">                
+                <div className="box">
+                    <h3>Reversed Spider Solitaire</h3>
+                    <br></br>
+                    <p>
+                        <Link to="/HomePage">Start Game</Link>
+                    </p>
+                </div>
+            </div>
+        </React.Fragment> 
     )
-    
-
 }
 
 export default GamePage;
