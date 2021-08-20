@@ -1,7 +1,7 @@
 import React from 'react'
-import '../cardHolder/CardHolder.css'
+import '../stackHolder/StackHolder.css'
 
-class CardHolder extends React.Component {
+class StackHolder extends React.Component {
 
     constructor({initialCards}) {
         super();
@@ -28,4 +28,4 @@ class CardHolder extends React.Component {
     }
 }
 
-export default CardHolder;
+export default StackHolder;

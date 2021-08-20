@@ -2,7 +2,7 @@ import './HomePage.css';
 import React from 'react'
 import Navbar from '../../components/navbar/Navbar';
 import Card from "../../components/card/Card"
-import CardHolder from '../../components/cardHolder/CardHolder';
+import StackHolder from '../../components/stackHolder/StackHolder';
 
 function HomePage() {
 
@@ -12,8 +12,8 @@ function HomePage() {
     return (
         <div className="home-page">
             <Navbar></Navbar>
-            <CardHolder initialCards={[createCard("6", "♠️"), createCard("6", "♠️"), createCard("6", "♠️"), createCard("6", "♠️")]}></CardHolder>
-            <CardHolder></CardHolder>
+            <StackHolder initialCards={[createCard("6", "♠️"), createCard("6", "♠️"), createCard("6", "♠️"), createCard("6", "♠️")]}></StackHolder>
+            <StackHolder></StackHolder>
         </div>
     )
     
