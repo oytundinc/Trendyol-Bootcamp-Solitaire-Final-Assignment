@@ -6,7 +6,7 @@ function GamePage() {
     return (
         <div>
             <Navbar></Navbar>
-            <Card rank={"5"} suit={"♠️"}></Card>
+            <Card rank={"6"} suit={"♠️"}></Card>
       
         </div>
     )
