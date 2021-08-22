@@ -12,7 +12,7 @@ function init() {
         let stack = [];
         for(let y = index; y < (index + 4); y++) {
             let isFaceDown = (y === (index + 3)) ? false : true;
-            stack.push(createCard(i, "♠️", isFaceDown));
+            stack.push(createCard(i, "♠️", isFaceDown, !isFaceDown));
         }
         index = index + 4;
         first.push(stack);
@@ -21,20 +21,23 @@ function init() {
     return first;
 }
 
-function createCard(rank, suit, isFaceDown) {
+function createCard(rank, suit, isFaceDown, isDraggable) {
     return {
             rank : rank, 
             suit : suit, 
-            isFaceDown : isFaceDown,};
+            isFaceDown : isFaceDown,
+            isDraggable : isDraggable};
 }
 
 function relocateCards(sourceStack, destinationStack, source, destination) {
     const sourceClone = Array.from(sourceStack);
     const destClone = Array.from(destinationStack);
 
-    const [removed] = sourceClone.splice(source.index, 1);
-    destClone.push(removed);
-
+    const removed = sourceClone.splice(source.index, (sourceStack.length - source.index));
+    console.log(source.index);
+    console.log(sourceStack.length); 
+    console.log(removed);
+    destClone.push(...removed);
     const result = [];
 
     result[source.droppableId] = sourceClone;
@@ -44,8 +47,42 @@ function relocateCards(sourceStack, destinationStack, source, destination) {
 }
 
 function checkIfLastCardNeedsToBeFacedUp(stack) {
-    if (stack.length > 0 && stack[stack.length -1].isFaceDown === true) {
-        stack[stack.length -1].isFaceDown = false;
+    const lastCard = stack[stack.length -1];
+    if (stack.length > 0 && lastCard.isFaceDown === true) {
+        lastCard.isFaceDown = false;
+    }
+}
+
+function getStartingIndexOfOrderedCards(stack) {
+    let startingIndexOfOrderedCards = null;
+    if(stack.length > 0) {
+        for(let i = 0; i < stack.length; i++) {
+            let card = stack[i];
+            if (card.isFaceDown || i === (stack.length - 1)) {
+                continue;
+            }
+            let nextCard  = stack[i + 1];
+            if ((card.rank + 1) !== nextCard.rank) {
+                startingIndexOfOrderedCards = null;
+                continue;
+            } else {
+                if (startingIndexOfOrderedCards === null) {
+                    startingIndexOfOrderedCards = i
+                }
+            }
+        }
+    }
+    return startingIndexOfOrderedCards;
+}
+
+function updateStack(stack, startingIndexOfOrderedCards) {
+    if (startingIndexOfOrderedCards === null) {
+        const lastCard = stack[stack.length -1];
+        lastCard.isDraggable = true;
+    } else {
+        for(let i = startingIndexOfOrderedCards; i < stack.length; i++) {
+            stack[i].isDraggable = true;
+        }
     }
 }
 
@@ -80,6 +117,11 @@ function HomePage() {
         newStack[sourceStackId] = result[sourceStackId];
         newStack[destinationStackId] = result[destinationStackId];
         checkIfLastCardNeedsToBeFacedUp(newStack[sourceStackId]);
+        let startingIndexOfOrderedCardsInSourceStack = getStartingIndexOfOrderedCards(newStack[sourceStackId]);
+        let startingIndexOfOrderedCardsInDestinationStack = getStartingIndexOfOrderedCards(newStack[destinationStackId]);
+        updateStack(newStack[sourceStackId], startingIndexOfOrderedCardsInSourceStack);
+        updateStack(newStack[sourceStackId], startingIndexOfOrderedCardsInDestinationStack);
+        console.log(newStack);
         setStacks(newStack);
     }
 

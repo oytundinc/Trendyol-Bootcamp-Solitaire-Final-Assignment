@@ -1,17 +1,17 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import './GamePage.css';
+import './WelcomePage.css';
 
 
-function GamePage() {
+function WelcomePage() {
     return (
         <React.Fragment>
-            <div className="game-page">                
+            <div className="welcome-page">                
                 <div className="box">
                     <h3>Reversed Spider Solitaire</h3>
                     <br></br>
                     <p>
-                        <Link to="/HomePage">Start Game</Link>
+                        <Link className="link" to="/HomePage">Start Game</Link>
                     </p>
                 </div>
             </div>
@@ -19,4 +19,4 @@ function GamePage() {
     )
 }
 
-export default GamePage;
+export default WelcomePage;

@@ -30,7 +30,7 @@ class StackHolder extends React.Component {
                                     key={(this.props.id + "/" + index)}
                                     draggableId={(this.props.id + "/" + index)}
                                     index={index}
-                                    isDragDisabled={card.isFaceDown}>
+                                    isDragDisabled={card.isFaceDown || !card.isDraggable}>
                                     {(provided, snapshot) => (
                                         <li
                                             ref={provided.innerRef}
