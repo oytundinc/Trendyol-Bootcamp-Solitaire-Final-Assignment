@@ -31,3 +31,9 @@
     bottom: 0px;
     right: 2px;
 }
+
+.card img {
+    width: 150px;
+    height: 200px;
+    border-radius: 5%
+}
