@@ -4,7 +4,7 @@
 ## INSTALLATION
 
 
-git clone git@github.com:oytundinc/Trendyol-Bootcamp-Solitaire-Final-Assignment.git
+git clone https://github.com/oytundinc/Trendyol-Bootcamp-Solitaire-Final-Assignment.git
 
 
 
@@ -22,8 +22,8 @@ npm run start
 
 ## LİGHTHOUSE TEST
 
-<img src='./src/assets/game-screen.png' alt='Lighthouse'/>
+<img src='./src/assets/Lighthouse-test.png' alt='Lighthouse'/>
 
 ## HEROKU DEPLOYMENT
 
-<img src='./src/assets/' alt='Lighthouse'/>
+<img src='./src/assets/heroku-deploy' alt='heroku'/>
