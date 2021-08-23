@@ -1,8 +1,8 @@
 import React from 'react'
-import "../card/Card.css"
 import RankSymbol from "../rankSymbol/RankSymbol"
 import SuitSymbol from "../suitSymbol/SuitSymbol"
 import CardBack from "../../assets/solitaire-card-back.jpeg"
+import "../card/Card.css"
 
 class Card extends React.Component {
 

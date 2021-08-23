@@ -1,13 +1,17 @@
+.stack-droppable-area {
+    display: block;
+}
+
 .stack-holder {
     border: 2px dotted var(--border-clr);
-    width: var(--card-width);
-    height: var(--card-height);
+    width: var(--stack-holder-width);
+    height: var(--stack-holder-height);
     border-radius:var(--card-border-radius);
     padding: 0px;
     margin: 10px;
-    text-align: center;
     position: relative;
     display: inline-block;
+    text-align: center;
 }
 
 .stack-holder li {
@@ -16,23 +20,23 @@
     z-index: 1;
 }
 
-.stack-holder li:nth-child(2) { top: 3em; }
-.stack-holder li:nth-child(3) { top: 6em; }
-.stack-holder li:nth-child(4) { top: 9em; }
-.stack-holder li:nth-child(5) { top: 12em; }
-.stack-holder li:nth-child(6) { top: 15em; }
-.stack-holder li:nth-child(7) { top: 18em; }
-.stack-holder li:nth-child(8) { top: 21em; }
-.stack-holder li:nth-child(9) { top: 24em; }
-.stack-holder li:nth-child(10) { top: 27em; }
-.stack-holder li:nth-child(11) { top: 30em; }
-.stack-holder li:nth-child(12) { top: 33em; }
-.stack-holder li:nth-child(13) { top: 36em; }
-.stack-holder li:nth-child(14) { top: 39em; }
-.stack-holder li:nth-child(15) { top: 42em; }
-.stack-holder li:nth-child(16) { top: 45em; }
-.stack-holder li:nth-child(17) { top: 48em; }
-.stack-holder li:nth-child(18) { top: 51em; }
-.stack-holder li:nth-child(19) { top: 54em; }
-.stack-holder li:nth-child(20) { top: 57em; }
-.stack-holder li:nth-child(21) { top: 60em; }
+.stack-holder li:nth-child(2) { top: var(--card-stack-holder-top-child-2); }
+.stack-holder li:nth-child(3) { top: var(--card-stack-holder-top-child-3); }
+.stack-holder li:nth-child(4) { top: var(--card-stack-holder-top-child-4); }
+.stack-holder li:nth-child(5) { top: var(--card-stack-holder-top-child-5); }
+.stack-holder li:nth-child(6) { top: var(--card-stack-holder-top-child-6); }
+.stack-holder li:nth-child(7) { top: var(--card-stack-holder-top-child-7); }
+.stack-holder li:nth-child(8) { top: var(--card-stack-holder-top-child-8); }
+.stack-holder li:nth-child(9) { top: var(--card-stack-holder-top-child-9); }
+.stack-holder li:nth-child(10) { top: var(--card-stack-holder-top-child-10); }
+.stack-holder li:nth-child(11) { top: var(--card-stack-holder-top-child-11); }
+.stack-holder li:nth-child(12) { top: var(--card-stack-holder-top-child-12); }
+.stack-holder li:nth-child(13) { top: var(--card-stack-holder-top-child-13); }
+.stack-holder li:nth-child(14) { top: var(--card-stack-holder-top-child-14); }
+.stack-holder li:nth-child(15) { top: var(--card-stack-holder-top-child-15); }
+.stack-holder li:nth-child(16) { top: var(--card-stack-holder-top-child-16); }
+.stack-holder li:nth-child(17) { top: var(--card-stack-holder-top-child-17); }
+.stack-holder li:nth-child(18) { top: var(--card-stack-holder-top-child-18); }
+.stack-holder li:nth-child(19) { top: var(--card-stack-holder-top-child-19); }
+.stack-holder li:nth-child(20) { top: var(--card-stack-holder-top-child-20); }
+.stack-holder li:nth-child(21) { top: var(--card-stack-holder-top-child-21); }

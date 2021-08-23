@@ -1,14 +1,13 @@
 import React from 'react'
+import { Ranks } from "../../constants/GameConstants"
 import "../rankSymbol/RankSymbol.css"
 
 
 function RankSymbol ({rank, className}) {
-
     return (
         <div className={className}>
-            {rank}
+            {Ranks[rank + ""]}
         </div>
-    
     )
 }
 

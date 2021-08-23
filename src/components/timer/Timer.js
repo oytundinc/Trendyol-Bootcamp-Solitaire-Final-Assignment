@@ -1,7 +1,6 @@
 import React from 'react'
 import '../timer/Timer.css'
 
-
 class Timer extends React.Component {
 
     constructor() {
@@ -64,7 +63,22 @@ class Timer extends React.Component {
         this.setState({ durationAsString: this.getDurationAsString()});
     }
 
+    resetTime() {
+        this.hours = 0;
+        this.minutes = 0;
+        this.seconds = 0; 
+    }
+
     render() {
+        
+        if (this.props.needsResetting) {
+            clearInterval(this.timerID);
+            this.resetTime();
+            this.timerID = setInterval(
+                () => this.updateTime(),
+                1000
+              );
+        }
         return (
             <p className="timer">{this.state.durationAsString}</p>
         )

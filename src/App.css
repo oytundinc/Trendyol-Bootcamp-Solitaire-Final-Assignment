@@ -1,29 +1,50 @@
 :root {
-  width: 100%;
-  height: 100%;
-  background-image: url('./assets/solitaire.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
   --background-clr: orange;
   --border-clr: #3e4444;
 
   --card-border-radius: 5%;
   --main-border-radius: 15px;
 
-  --card-width: 152.5px;
-  --card-height: 202.5px;
+  --card-width: 120px;
+  --card-height: 170px;
 
-  --suit-font-size: 25px;
-  --big-suit-font-size: 150px;
+  --stack-holder-width: 122.5px;
+  --stack-holder-height: 172.5px;
+
+  --suit-font-size: 23px;
+  --big-suit-font-size: 130px;
   --rank-font-size: 20px;
 
+  --card-stack-holder-top-child-2: 2em;
+  --card-stack-holder-top-child-3: 4em;
+  --card-stack-holder-top-child-4: 6em;
+  --card-stack-holder-top-child-5: 8em;
+  --card-stack-holder-top-child-6: 10em;
+  --card-stack-holder-top-child-7: 12em;
+  --card-stack-holder-top-child-8: 14em;
+  --card-stack-holder-top-child-9: 16em;
+  --card-stack-holder-top-child-10: 18em;
+  --card-stack-holder-top-child-11: 20em;
+  --card-stack-holder-top-child-12: 22em;
+  --card-stack-holder-top-child-13: 24em;
+  --card-stack-holder-top-child-14: 26em;
+  --card-stack-holder-top-child-15: 28em;
+  --card-stack-holder-top-child-16: 30em;
+  --card-stack-holder-top-child-17: 32em;
+  --card-stack-holder-top-child-18: 34em;
+  --card-stack-holder-top-child-19: 36em;
+  --card-stack-holder-top-child-20: 38em;
+  --card-stack-holder-top-child-21: 40em;
 }
 
 * {
     margin: 0;
     padding: 0;
+}
+
+.root {
+  width: 100%;
+  height: 100%;
 }
   
 body {
@@ -33,100 +54,421 @@ body {
 }
 
 @media (max-width:1800px){
-:root {
-  --card-width: 140px;
-  --card-height: 190px;
-
-  --suit-font-size: 25px;
-  --big-suit-font-size: 140px;
-  --rank-font-size: 20px;
-  }
-}
-
-@media (max-width:1625px){
   :root {
-    --card-width: 130px;
-    --card-height: 180px;
+    --card-width: 110px;
+    --card-height: 160px;
+
+    --stack-holder-width: 112.5px;
+    --stack-holder-height: 162.5px;
 
     --suit-font-size: 22px;
-    --big-suit-font-size: 130px;
-    --rank-font-size: 20px;
+    --big-suit-font-size: 125px;
+    --rank-font-size: 19px;
+  
+    --card-stack-holder-top-child-2: 2em;
+    --card-stack-holder-top-child-3: 4em;
+    --card-stack-holder-top-child-4: 6em;
+    --card-stack-holder-top-child-5: 8em;
+    --card-stack-holder-top-child-6: 10em;
+    --card-stack-holder-top-child-7: 12em;
+    --card-stack-holder-top-child-8: 14em;
+    --card-stack-holder-top-child-9: 16em;
+    --card-stack-holder-top-child-10: 18em;
+    --card-stack-holder-top-child-11: 20em;
+    --card-stack-holder-top-child-12: 22em;
+    --card-stack-holder-top-child-13: 24em;
+    --card-stack-holder-top-child-14: 26em;
+    --card-stack-holder-top-child-15: 28em;
+    --card-stack-holder-top-child-16: 30em;
+    --card-stack-holder-top-child-17: 32em;
+    --card-stack-holder-top-child-18: 34em;
+    --card-stack-holder-top-child-19: 36em;
+    --card-stack-holder-top-child-20: 38em;
+    --card-stack-holder-top-child-21: 40em;
   }
 }
 
-@media (max-width:1525px){
+@media (max-width:1650px){
   :root {
-    --card-width: 120px;
-    --card-height: 170px;
+    --card-width: 105px;
+    --card-height: 150px;
+
+    --stack-holder-width: 107.5px;
+    --stack-holder-height: 152.5px;
 
     --suit-font-size: 21px;
-    --big-suit-font-size: 120px;
-    --rank-font-size: 19px;
+    --big-suit-font-size: 118px;
+    --rank-font-size: 18px;
+
+    --card-stack-holder-top-child-2: 2em;
+    --card-stack-holder-top-child-3: 4em;
+    --card-stack-holder-top-child-4: 6em;
+    --card-stack-holder-top-child-5: 8em;
+    --card-stack-holder-top-child-6: 10em;
+    --card-stack-holder-top-child-7: 12em;
+    --card-stack-holder-top-child-8: 14em;
+    --card-stack-holder-top-child-9: 16em;
+    --card-stack-holder-top-child-10: 18em;
+    --card-stack-holder-top-child-11: 20em;
+    --card-stack-holder-top-child-12: 22em;
+    --card-stack-holder-top-child-13: 24em;
+    --card-stack-holder-top-child-14: 26em;
+    --card-stack-holder-top-child-15: 28em;
+    --card-stack-holder-top-child-16: 30em;
+    --card-stack-holder-top-child-17: 32em;
+    --card-stack-holder-top-child-18: 34em;
+    --card-stack-holder-top-child-19: 36em;
+    --card-stack-holder-top-child-20: 38em;
+    --card-stack-holder-top-child-21: 40em;
+  }
+}
+
+@media (max-width:1560px){
+  :root {
+    --card-width: 100px;
+    --card-height: 140px;
+
+    --stack-holder-width: 102.5px;
+    --stack-holder-height: 142.5px;
+
+    --suit-font-size: 20px;
+    --big-suit-font-size: 110px;
+    --rank-font-size: 17px;
+
+    --card-stack-holder-top-child-2: 2em;
+    --card-stack-holder-top-child-3: 4em;
+    --card-stack-holder-top-child-4: 6em;
+    --card-stack-holder-top-child-5: 8em;
+    --card-stack-holder-top-child-6: 10em;
+    --card-stack-holder-top-child-7: 12em;
+    --card-stack-holder-top-child-8: 14em;
+    --card-stack-holder-top-child-9: 16em;
+    --card-stack-holder-top-child-10: 18em;
+    --card-stack-holder-top-child-11: 20em;
+    --card-stack-holder-top-child-12: 22em;
+    --card-stack-holder-top-child-13: 24em;
+    --card-stack-holder-top-child-14: 26em;
+    --card-stack-holder-top-child-15: 28em;
+    --card-stack-holder-top-child-16: 30em;
+    --card-stack-holder-top-child-17: 32em;
+    --card-stack-holder-top-child-18: 34em;
+    --card-stack-holder-top-child-19: 36em;
+    --card-stack-holder-top-child-20: 38em;
+    --card-stack-holder-top-child-21: 40em;
   }
 }
 
 @media (max-width:1425px){
   :root {
-    --card-width: 110px;
-    --card-height: 160px;
+    --card-width: 90px;
+    --card-height: 130px;
 
-    --suit-font-size: 20px;
-    --big-suit-font-size: 110px;
-    --rank-font-size: 18px;
+    --stack-holder-width: 92.5px;
+    --stack-holder-height: 132.5px;
+
+    --suit-font-size: 19px;
+    --big-suit-font-size: 100px;
+    --rank-font-size: 16px;
+
+    --card-stack-holder-top-child-2: 2em;
+    --card-stack-holder-top-child-3: 4em;
+    --card-stack-holder-top-child-4: 6em;
+    --card-stack-holder-top-child-5: 8em;
+    --card-stack-holder-top-child-6: 10em;
+    --card-stack-holder-top-child-7: 12em;
+    --card-stack-holder-top-child-8: 14em;
+    --card-stack-holder-top-child-9: 16em;
+    --card-stack-holder-top-child-10: 18em;
+    --card-stack-holder-top-child-11: 20em;
+    --card-stack-holder-top-child-12: 22em;
+    --card-stack-holder-top-child-13: 24em;
+    --card-stack-holder-top-child-14: 26em;
+    --card-stack-holder-top-child-15: 28em;
+    --card-stack-holder-top-child-16: 30em;
+    --card-stack-holder-top-child-17: 32em;
+    --card-stack-holder-top-child-18: 34em;
+    --card-stack-holder-top-child-19: 36em;
+    --card-stack-holder-top-child-20: 38em;
+    --card-stack-holder-top-child-21: 40em;
   }
 }
 
 @media (max-width:1325px){
   :root {
-    --card-width: 100px;
-    --card-height: 150px;
+    --card-width: 80px;
+    --card-height: 115px;
 
-    --suit-font-size: 19px;
-    --big-suit-font-size: 110px;
-    --rank-font-size: 17px;
+    --stack-holder-width: 82.5px;
+    --stack-holder-height: 117.5px;
+
+    --suit-font-size: 18px;
+    --big-suit-font-size: 90px;
+    --rank-font-size: 15px;
+
+    --card-stack-holder-top-child-2: 2em;
+    --card-stack-holder-top-child-3: 4em;
+    --card-stack-holder-top-child-4: 6em;
+    --card-stack-holder-top-child-5: 8em;
+    --card-stack-holder-top-child-6: 10em;
+    --card-stack-holder-top-child-7: 12em;
+    --card-stack-holder-top-child-8: 14em;
+    --card-stack-holder-top-child-9: 16em;
+    --card-stack-holder-top-child-10: 18em;
+    --card-stack-holder-top-child-11: 20em;
+    --card-stack-holder-top-child-12: 22em;
+    --card-stack-holder-top-child-13: 24em;
+    --card-stack-holder-top-child-14: 26em;
+    --card-stack-holder-top-child-15: 28em;
+    --card-stack-holder-top-child-16: 30em;
+    --card-stack-holder-top-child-17: 32em;
+    --card-stack-holder-top-child-18: 34em;
+    --card-stack-holder-top-child-19: 36em;
+    --card-stack-holder-top-child-20: 38em;
+    --card-stack-holder-top-child-21: 40em;
   }
 }
 
-@media (max-width:1225px){
+@media (max-width:1250px){
   :root {
-    --card-width: 90px;
-    --card-height: 140px;
+    --card-width: 70px;
+    --card-height: 100px;
 
-    --suit-font-size: 18px;
-    --big-suit-font-size: 110px;
-    --rank-font-size: 17px;
+    --stack-holder-width: 72.5px;
+    --stack-holder-height: 102.5px;
+
+    --suit-font-size: 16px;
+    --big-suit-font-size: 75px;
+    --rank-font-size: 15px;
+
+    --card-stack-holder-top-child-2: 2em;
+    --card-stack-holder-top-child-3: 4em;
+    --card-stack-holder-top-child-4: 6em;
+    --card-stack-holder-top-child-5: 8em;
+    --card-stack-holder-top-child-6: 10em;
+    --card-stack-holder-top-child-7: 12em;
+    --card-stack-holder-top-child-8: 14em;
+    --card-stack-holder-top-child-9: 16em;
+    --card-stack-holder-top-child-10: 18em;
+    --card-stack-holder-top-child-11: 20em;
+    --card-stack-holder-top-child-12: 22em;
+    --card-stack-holder-top-child-13: 24em;
+    --card-stack-holder-top-child-14: 26em;
+    --card-stack-holder-top-child-15: 28em;
+    --card-stack-holder-top-child-16: 30em;
+    --card-stack-holder-top-child-17: 32em;
+    --card-stack-holder-top-child-18: 34em;
+    --card-stack-holder-top-child-19: 36em;
+    --card-stack-holder-top-child-20: 38em;
+    --card-stack-holder-top-child-21: 40em;
   }
 }
 
 @media (max-width:1125px){
   :root {
-    --card-width: 75px;
-    --card-height: 110px;
+    --card-width: 60px;
+    --card-height: 90px;
 
-    --suit-font-size: 17px;
-    --big-suit-font-size: 80px;
-    --rank-font-size: 15px;
+    --stack-holder-width: 62.5px;
+    --stack-holder-height: 92.5px;
+
+    --suit-font-size: 14px;
+    --big-suit-font-size: 65px;
+    --rank-font-size: 13px;
+
+    --card-stack-holder-top-child-2: 1em;
+    --card-stack-holder-top-child-3: 2em;
+    --card-stack-holder-top-child-4: 3em;
+    --card-stack-holder-top-child-5: 4em;
+    --card-stack-holder-top-child-6: 5em;
+    --card-stack-holder-top-child-7: 6em;
+    --card-stack-holder-top-child-8: 7em;
+    --card-stack-holder-top-child-9: 8em;
+    --card-stack-holder-top-child-10: 9em;
+    --card-stack-holder-top-child-11: 10em;
+    --card-stack-holder-top-child-12: 11em;
+    --card-stack-holder-top-child-13: 12em;
+    --card-stack-holder-top-child-14: 13em;
+    --card-stack-holder-top-child-15: 14em;
+    --card-stack-holder-top-child-16: 15em;
+    --card-stack-holder-top-child-17: 16em;
+    --card-stack-holder-top-child-18: 17em;
+    --card-stack-holder-top-child-19: 18em;
+    --card-stack-holder-top-child-20: 19em;
+    --card-stack-holder-top-child-21: 20em;
   }
 }
 
 @media (max-width:1000px){
   :root {
-    --card-width: 60px;
-    --card-height: 90px;
+    --card-width: 50px;
+    --card-height: 80px;
 
-    --suit-font-size: 14px;
-    --big-suit-font-size: 65px;
-    --rank-font-size: 12px;
+    --stack-holder-width: 52.5px;
+    --stack-holder-height: 82.5px;
+
+    --suit-font-size: 12px;
+    --big-suit-font-size: 60px;
+    --rank-font-size: 11px;
+
+    --card-stack-holder-top-child-2: 1em;
+    --card-stack-holder-top-child-3: 2em;
+    --card-stack-holder-top-child-4: 3em;
+    --card-stack-holder-top-child-5: 4em;
+    --card-stack-holder-top-child-6: 5em;
+    --card-stack-holder-top-child-7: 6em;
+    --card-stack-holder-top-child-8: 7em;
+    --card-stack-holder-top-child-9: 8em;
+    --card-stack-holder-top-child-10: 9em;
+    --card-stack-holder-top-child-11: 10em;
+    --card-stack-holder-top-child-12: 11em;
+    --card-stack-holder-top-child-13: 12em;
+    --card-stack-holder-top-child-14: 13em;
+    --card-stack-holder-top-child-15: 14em;
+    --card-stack-holder-top-child-16: 15em;
+    --card-stack-holder-top-child-17: 16em;
+    --card-stack-holder-top-child-18: 17em;
+    --card-stack-holder-top-child-19: 18em;
+    --card-stack-holder-top-child-20: 19em;
+    --card-stack-holder-top-child-21: 20em;
   }
 }
 
-@media (max-width:850px){
+@media (max-width:800px){
   :root {
-    --card-width: 45px;
+    --card-width: 40px;
     --card-height: 70px;
 
-    --suit-font-size: 14px;
-    --big-suit-font-size: 65px;
-    --rank-font-size: 12px;
+    --stack-holder-width: 42.5px;
+    --stack-holder-height: 72.5px;
+
+    --suit-font-size: 10px;
+    --big-suit-font-size: 55px;
+    --rank-font-size: 9px;
+
+    --card-stack-holder-top-child-2: 1em;
+    --card-stack-holder-top-child-3: 2em;
+    --card-stack-holder-top-child-4: 3em;
+    --card-stack-holder-top-child-5: 4em;
+    --card-stack-holder-top-child-6: 5em;
+    --card-stack-holder-top-child-7: 6em;
+    --card-stack-holder-top-child-8: 7em;
+    --card-stack-holder-top-child-9: 8em;
+    --card-stack-holder-top-child-10: 9em;
+    --card-stack-holder-top-child-11: 10em;
+    --card-stack-holder-top-child-12: 11em;
+    --card-stack-holder-top-child-13: 12em;
+    --card-stack-holder-top-child-14: 13em;
+    --card-stack-holder-top-child-15: 14em;
+    --card-stack-holder-top-child-16: 15em;
+    --card-stack-holder-top-child-17: 16em;
+    --card-stack-holder-top-child-18: 17em;
+    --card-stack-holder-top-child-19: 18em;
+    --card-stack-holder-top-child-20: 19em;
+    --card-stack-holder-top-child-21: 20em;
+  }
+}
+
+@media (max-width:700px){
+  :root {
+    --card-width: 30px;
+    --card-height: 55px;
+
+    --stack-holder-width: 32.5px;
+    --stack-holder-height: 57.5px;
+
+    --suit-font-size: 8px;
+    --big-suit-font-size: 45px;
+    --rank-font-size: 7px;
+
+    --card-stack-holder-top-child-2: 1em;
+    --card-stack-holder-top-child-3: 2em;
+    --card-stack-holder-top-child-4: 3em;
+    --card-stack-holder-top-child-5: 4em;
+    --card-stack-holder-top-child-6: 5em;
+    --card-stack-holder-top-child-7: 6em;
+    --card-stack-holder-top-child-8: 7em;
+    --card-stack-holder-top-child-9: 8em;
+    --card-stack-holder-top-child-10: 9em;
+    --card-stack-holder-top-child-11: 10em;
+    --card-stack-holder-top-child-12: 11em;
+    --card-stack-holder-top-child-13: 12em;
+    --card-stack-holder-top-child-14: 13em;
+    --card-stack-holder-top-child-15: 14em;
+    --card-stack-holder-top-child-16: 15em;
+    --card-stack-holder-top-child-17: 16em;
+    --card-stack-holder-top-child-18: 17em;
+    --card-stack-holder-top-child-19: 18em;
+    --card-stack-holder-top-child-20: 19em;
+    --card-stack-holder-top-child-21: 20em;
+  }
+}
+
+@media (max-width:580px){
+  :root {
+    --card-width: 20px;
+    --card-height: 30px;
+
+    --stack-holder-width: 22.5px;
+    --stack-holder-height: 32.5px;
+
+    --suit-font-size: 5px;
+    --big-suit-font-size: 25px;
+    --rank-font-size: 4px;
+
+    --card-stack-holder-top-child-2: 1em;
+    --card-stack-holder-top-child-3: 2em;
+    --card-stack-holder-top-child-4: 3em;
+    --card-stack-holder-top-child-5: 4em;
+    --card-stack-holder-top-child-6: 5em;
+    --card-stack-holder-top-child-7: 6em;
+    --card-stack-holder-top-child-8: 7em;
+    --card-stack-holder-top-child-9: 8em;
+    --card-stack-holder-top-child-10: 9em;
+    --card-stack-holder-top-child-11: 10em;
+    --card-stack-holder-top-child-12: 11em;
+    --card-stack-holder-top-child-13: 12em;
+    --card-stack-holder-top-child-14: 13em;
+    --card-stack-holder-top-child-15: 14em;
+    --card-stack-holder-top-child-16: 15em;
+    --card-stack-holder-top-child-17: 16em;
+    --card-stack-holder-top-child-18: 17em;
+    --card-stack-holder-top-child-19: 18em;
+    --card-stack-holder-top-child-20: 19em;
+    --card-stack-holder-top-child-21: 20em;
+  }
+}
+
+@media (max-width:480px){
+  :root {
+    --card-width: 25px;
+    --card-height: 40px;
+
+    --stack-holder-width: 27.5px;
+    --stack-holder-height: 42.5px;
+
+    --suit-font-size: 5px;
+    --big-suit-font-size: 30px;
+    --rank-font-size: 4px;
+
+    --card-stack-holder-top-child-2: 0.5em;
+    --card-stack-holder-top-child-3: 1em;
+    --card-stack-holder-top-child-4: 1.5em;
+    --card-stack-holder-top-child-5: 2em;
+    --card-stack-holder-top-child-6: 2.5em;
+    --card-stack-holder-top-child-7: 3em;
+    --card-stack-holder-top-child-8: 3.5em;
+    --card-stack-holder-top-child-9: 4em;
+    --card-stack-holder-top-child-10: 4.5em;
+    --card-stack-holder-top-child-11: 5em;
+    --card-stack-holder-top-child-12: 5.5em;
+    --card-stack-holder-top-child-13: 6em;
+    --card-stack-holder-top-child-14: 6.5em;
+    --card-stack-holder-top-child-15: 7em;
+    --card-stack-holder-top-child-16: 7.5em;
+    --card-stack-holder-top-child-17: 8em;
+    --card-stack-holder-top-child-18: 8.5em;
+    --card-stack-holder-top-child-19: 9em;
+    --card-stack-holder-top-child-20: 9.5em;
+    --card-stack-holder-top-child-21: 10em;
   }
 }
