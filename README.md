@@ -4,13 +4,15 @@
 ## INSTALLATION
 
 
+``
 git clone https://github.com/oytundinc/Trendyol-Bootcamp-Solitaire-Final-Assignment.git
+```
 
-
-
+```
 npm install
 
-npm run start
+npm start
+```
 
 ## DEMO
 
@@ -26,4 +28,4 @@ npm run start
 
 ## HEROKU DEPLOYMENT
 
-<img src='./src/assets/heroku-deploy' alt='heroku'/>
+<img src='./src/assets/heroku-deploy.png' alt='heroku'/>
