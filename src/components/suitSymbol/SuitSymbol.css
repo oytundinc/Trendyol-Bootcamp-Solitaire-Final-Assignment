@@ -1,9 +1,9 @@
 .suit {
-    font-size: 25px;
+    font-size: var(--suit-font-size);
     text-align: center;
 }
 
 .big_suit_center {
-    font-size: 150px;
+    font-size: var(--big-suit-font-size);
     text-align: center;
 }

@@ -5,11 +5,9 @@ import "../navbar/Navbar.css"
 const Navbar = () => {
     return (
         <div className="navbar">
-            <Timer className="timer"></Timer>
-            <Button>New Game</Button>
-            
-        </div>
-        
+            <Timer></Timer>
+            <Button className="new-game-btn">New Game</Button>
+        </div>        
     )
 }
 

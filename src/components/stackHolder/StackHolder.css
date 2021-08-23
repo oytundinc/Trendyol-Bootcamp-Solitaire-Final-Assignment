@@ -1,8 +1,8 @@
-.card-holder {
-    border: 2px dotted black;
-    width: 152.5px;
-    height: 202.5px;
-    border-radius: 5%;
+.stack-holder {
+    border: 2px dotted var(--border-clr);
+    width: var(--card-width);
+    height: var(--card-height);
+    border-radius:var(--card-border-radius);
     padding: 0px;
     margin: 10px;
     text-align: center;
@@ -10,29 +10,29 @@
     display: inline-block;
 }
 
-.card-holder li {
+.stack-holder li {
     position: absolute;
     list-style-type: none;
     z-index: 1;
 }
 
-.card-holder li:nth-child(2) { top: 3em; }
-.card-holder li:nth-child(3) { top: 6em; }
-.card-holder li:nth-child(4) { top: 9em; }
-.card-holder li:nth-child(5) { top: 12em; }
-.card-holder li:nth-child(6) { top: 15em; }
-.card-holder li:nth-child(7) { top: 18em; }
-.card-holder li:nth-child(8) { top: 21em; }
-.card-holder li:nth-child(9) { top: 24em; }
-.card-holder li:nth-child(10) { top: 27em; }
-.card-holder li:nth-child(11) { top: 30em; }
-.card-holder li:nth-child(12) { top: 33em; }
-.card-holder li:nth-child(13) { top: 36em; }
-.card-holder li:nth-child(14) { top: 39em; }
-.card-holder li:nth-child(15) { top: 42em; }
-.card-holder li:nth-child(16) { top: 45em; }
-.card-holder li:nth-child(17) { top: 48em; }
-.card-holder li:nth-child(18) { top: 51em; }
-.card-holder li:nth-child(19) { top: 54em; }
-.card-holder li:nth-child(20) { top: 57em; }
-.card-holder li:nth-child(21) { top: 60em; }
+.stack-holder li:nth-child(2) { top: 3em; }
+.stack-holder li:nth-child(3) { top: 6em; }
+.stack-holder li:nth-child(4) { top: 9em; }
+.stack-holder li:nth-child(5) { top: 12em; }
+.stack-holder li:nth-child(6) { top: 15em; }
+.stack-holder li:nth-child(7) { top: 18em; }
+.stack-holder li:nth-child(8) { top: 21em; }
+.stack-holder li:nth-child(9) { top: 24em; }
+.stack-holder li:nth-child(10) { top: 27em; }
+.stack-holder li:nth-child(11) { top: 30em; }
+.stack-holder li:nth-child(12) { top: 33em; }
+.stack-holder li:nth-child(13) { top: 36em; }
+.stack-holder li:nth-child(14) { top: 39em; }
+.stack-holder li:nth-child(15) { top: 42em; }
+.stack-holder li:nth-child(16) { top: 45em; }
+.stack-holder li:nth-child(17) { top: 48em; }
+.stack-holder li:nth-child(18) { top: 51em; }
+.stack-holder li:nth-child(19) { top: 54em; }
+.stack-holder li:nth-child(20) { top: 57em; }
+.stack-holder li:nth-child(21) { top: 60em; }

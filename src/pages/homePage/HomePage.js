@@ -34,9 +34,6 @@ function relocateCards(sourceStack, destinationStack, source, destination) {
     const destClone = Array.from(destinationStack);
 
     const removed = sourceClone.splice(source.index, (sourceStack.length - source.index));
-    console.log(source.index);
-    console.log(sourceStack.length); 
-    console.log(removed);
     destClone.push(...removed);
     const result = [];
 
@@ -88,16 +85,53 @@ function updateStack(stack, startingIndexOfOrderedCards) {
 
 function HomePage() {
 
+    // 700px ----> 400 px 
+
+    // UI - Droppable area fit content???
+
+    // UI - Game Bottom deal section 
+
+    // Create cards, shuffle, deal them
+
+    // Check completed arrays and increase 
+
+    // Dialogs warning dialog, success dialog
+
+    // Naming conventions, check variable names, check const let usage, function names, SOLID
+    
+    // Unit Test
+
+    // Cypress UI test
+
+    // try-catch and logs
+    
+
     const[stacks, setStacks] = useState(init());
 
+    const[selectedIndexes, setSelectedIndexes] = useState([]);
+
+    const[selectedStackId, setSelectedStackId] = useState("");
+
     function onDragStart(dragStartedEvent) {
+        const source = dragStartedEvent.source;
+        const sourceStackId = dragStartedEvent.source.droppableId;
+        let sourceStack = stacks[sourceStackId];
+        const newSelectedIndexes = [];
+        for(let i = source.index; i < sourceStack.length; i++) {
+            newSelectedIndexes.push(i);
+        }
+        setSelectedStackId(sourceStackId);
+        setSelectedIndexes(newSelectedIndexes);
     }
 
     function onDragEnd(dragEndedEvent) {
+        setSelectedStackId("");
+        setSelectedIndexes([]);
         const source = dragEndedEvent.source;
         const destination = dragEndedEvent.destination;
 
         if(destination === null) {
+            // Show can't move dialog
             return;
         }
         
@@ -117,24 +151,23 @@ function HomePage() {
         newStack[sourceStackId] = result[sourceStackId];
         newStack[destinationStackId] = result[destinationStackId];
         checkIfLastCardNeedsToBeFacedUp(newStack[sourceStackId]);
-        let startingIndexOfOrderedCardsInSourceStack = getStartingIndexOfOrderedCards(newStack[sourceStackId]);
-        let startingIndexOfOrderedCardsInDestinationStack = getStartingIndexOfOrderedCards(newStack[destinationStackId]);
-        updateStack(newStack[sourceStackId], startingIndexOfOrderedCardsInSourceStack);
-        updateStack(newStack[sourceStackId], startingIndexOfOrderedCardsInDestinationStack);
-        console.log(newStack);
+        updateStack(newStack[sourceStackId], getStartingIndexOfOrderedCards(newStack[sourceStackId]));
+        updateStack(newStack[sourceStackId], getStartingIndexOfOrderedCards(newStack[destinationStackId]));
         setStacks(newStack);
     }
 
     return (
         <div className="home-page">
             <Navbar></Navbar>
-            <DragDropContext
-                onDragStart={onDragStart}
-                onDragEnd={onDragEnd}>
+            <div className="game-container">
+                <DragDropContext
+                    onDragStart={onDragStart}
+                    onDragEnd={onDragEnd}>
                     {stacks.map((stack, index) => (
-                        <StackHolder id={index} cards={stack} key={index}></StackHolder>
+                        <StackHolder id={index} cards={stack} key={index} selectedIndexes={selectedIndexes} selectedStackId={selectedStackId}></StackHolder>
                     ))}
-            </DragDropContext>
+                </DragDropContext>
+            </div>
         </div>
     )
 }

@@ -1,20 +1,132 @@
 :root {
-    
-    width: 100%;
-    height: 100%;
-    background-image: url('./assets/solitaire.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  width: 100%;
+  height: 100%;
+  background-image: url('./assets/solitaire.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  --background-clr: orange;
+  --border-clr: #3e4444;
+
+  --card-border-radius: 5%;
+  --main-border-radius: 15px;
+
+  --card-width: 152.5px;
+  --card-height: 202.5px;
+
+  --suit-font-size: 25px;
+  --big-suit-font-size: 150px;
+  --rank-font-size: 20px;
+
 }
 
 * {
     margin: 0;
     padding: 0;
-  }
+}
   
-  body {
+body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
+}
+
+@media (max-width:1800px){
+:root {
+  --card-width: 140px;
+  --card-height: 190px;
+
+  --suit-font-size: 25px;
+  --big-suit-font-size: 140px;
+  --rank-font-size: 20px;
   }
+}
+
+@media (max-width:1625px){
+  :root {
+    --card-width: 130px;
+    --card-height: 180px;
+
+    --suit-font-size: 22px;
+    --big-suit-font-size: 130px;
+    --rank-font-size: 20px;
+  }
+}
+
+@media (max-width:1525px){
+  :root {
+    --card-width: 120px;
+    --card-height: 170px;
+
+    --suit-font-size: 21px;
+    --big-suit-font-size: 120px;
+    --rank-font-size: 19px;
+  }
+}
+
+@media (max-width:1425px){
+  :root {
+    --card-width: 110px;
+    --card-height: 160px;
+
+    --suit-font-size: 20px;
+    --big-suit-font-size: 110px;
+    --rank-font-size: 18px;
+  }
+}
+
+@media (max-width:1325px){
+  :root {
+    --card-width: 100px;
+    --card-height: 150px;
+
+    --suit-font-size: 19px;
+    --big-suit-font-size: 110px;
+    --rank-font-size: 17px;
+  }
+}
+
+@media (max-width:1225px){
+  :root {
+    --card-width: 90px;
+    --card-height: 140px;
+
+    --suit-font-size: 18px;
+    --big-suit-font-size: 110px;
+    --rank-font-size: 17px;
+  }
+}
+
+@media (max-width:1125px){
+  :root {
+    --card-width: 75px;
+    --card-height: 110px;
+
+    --suit-font-size: 17px;
+    --big-suit-font-size: 80px;
+    --rank-font-size: 15px;
+  }
+}
+
+@media (max-width:1000px){
+  :root {
+    --card-width: 60px;
+    --card-height: 90px;
+
+    --suit-font-size: 14px;
+    --big-suit-font-size: 65px;
+    --rank-font-size: 12px;
+  }
+}
+
+@media (max-width:850px){
+  :root {
+    --card-width: 45px;
+    --card-height: 70px;
+
+    --suit-font-size: 14px;
+    --big-suit-font-size: 65px;
+    --rank-font-size: 12px;
+  }
+}

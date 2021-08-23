@@ -1,10 +1,10 @@
 .card {
     position: relative;
-    border: 1px solid black;
+    border: 1px solid var(--border-clr);
     cursor: pointer;
-    width: 150px;
-    height: 200px;
-    border-radius: 5%;
+    width: var(--card-width);
+    height: var(--card-height);
+    border-radius: var(--card-border-radius);
     background-color: whitesmoke;
 }
 
@@ -33,7 +33,7 @@
 }
 
 .card img {
-    width: 150px;
-    height: 200px;
+    width: var(--card-width);
+    height: var(--card-height);
     border-radius: 5%
 }

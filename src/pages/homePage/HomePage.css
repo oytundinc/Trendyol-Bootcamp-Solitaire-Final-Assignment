@@ -1,4 +1,8 @@
 .home-page{
     
+}
 
+.game-container{
+    display: flex;
+    justify-content: center;
 }
