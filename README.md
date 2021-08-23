@@ -4,7 +4,7 @@
 ## INSTALLATION
 
 
-``
+```
 git clone https://github.com/oytundinc/Trendyol-Bootcamp-Solitaire-Final-Assignment.git
 ```
 
